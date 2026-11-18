@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://127.0.0.1:8000/api",
+  baseURL: "https://flight-delay-app-x259.onrender.com/api",
 });
 
-export const predictDelay = (data) => API.post("/predict/", data);
+export const predictDelay = (data) => [invalid URL]("/predict/", data);
 export const getStats = () => API.get("/stats/");
 export const getHistory = () => API.get("/history/");
-export const registerUser = (data) => API.post("/auth/register/", data);
-export const loginUser = (data) => API.post("/auth/login/", data);
+export const registerUser = (data) => [invalid URL]("/auth/register/", data);
+export const loginUser = (data) => [invalid URL]("/auth/login/", data);
