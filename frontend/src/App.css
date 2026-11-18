@@ -1,0 +1,19 @@
+body { font-family: system-ui, sans-serif; background: #f1f5f9; margin: 0; color: #0f172a; }
+.navbar { display: flex; justify-content: space-between; align-items: center; background: #0f172a; color: white; padding: 14px 24px; }
+.navbar h1 { margin: 0; font-size: 1.25rem; }
+.nav-links { display: flex; gap: 10px; }
+.nav-links button { background: #1e293b; color: white; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; }
+.nav-links button:hover { background: #2563eb; }
+.container { max-width: 960px; margin: 24px auto; padding: 0 16px; }
+.card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 20px; }
+.kpi-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.kpi h3 { margin: 0; font-size: 1.8rem; color: #2563eb; }
+.form-grid { display: grid; gap: 12px; }
+.form-grid label { display: grid; gap: 4px; font-weight: 600; font-size: 0.9rem; }
+.form-grid input, .form-grid select { padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; }
+.form-grid button { padding: 11px; background: #2563eb; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
+.link-btn { background: none; border: none; color: #2563eb; cursor: pointer; font-weight: 600; }
+.result-box { margin-top: 16px; padding: 14px; border-radius: 8px; }
+.risk-high { background: #fee2e2; color: #991b1b; }
+.risk-medium { background: #fef3c7; color: #92400e; }
+.risk-low { background: #dcfce7; color: #166534; }
