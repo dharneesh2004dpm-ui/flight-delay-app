@@ -1,4 +1,5 @@
 import os
+import json
 import pandas as pd
 from django.conf import settings
 from django.contrib.auth import authenticate
@@ -61,11 +62,9 @@ def history_view(request):
 
 @api_view(["GET"])
 def stats_view(request):
-    df = pd.read_csv(DATA_PATH)
-    by_airline = (df.groupby("Airline")["Delay_Target"].mean() * 100).round(1).reset_index()
-    by_hour = (df.groupby("Scheduled_Departure_Hour")["Delay_Target"].mean() * 100).round(1).reset_index()
-    by_weather = (df.groupby("Weather")["Delay_Target"].mean() * 100).round(1).reset_index()
-    by_airport = (df.groupby("Origin_Airport")["Delay_Target"].mean() * 100).round(1).head(10).reset_index()
+    stats_path = os.path.join(settings.BASE_DIR, "ml", "stats_cache.json")
+    with open(stats_path) as f:
+        return Response(json.load(f))
 
     return Response({
         "total_flights": len(df),
